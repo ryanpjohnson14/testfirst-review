@@ -1,0 +1,34 @@
+<script src='rotater.js'>
+    </script>
+    <script>
+        var rotate = rotater('abcde');
+        document.write(rotate(1) === 'bcdea');
+        document.write('<br>');
+        document.write(rotate(2) === 'cdeab');
+        document.write('<br>');
+        document.write(rotate(3) === 'deabc');
+        document.write('<br>');
+        document.write(rotate(4) === 'eabcd');
+        document.write('<br>');
+		document.write(rotate(5) === 'abcde');
+        document.write('<br>');
+        document.write(rotate(6) === 'bcdea');
+        document.write('<br>');
+
+        rotate = rotater('helloWORLD');
+
+document.write(rotate(1) === 'elloWORLDh'); // same as before
+document.write(rotate(2) === 'lloWORLDhe'); // same as before
+
+rotate(10); // max value triggers rotation reversal
+
+document.write(rotate(1) === 'DhelloWORL');
+document.write(rotate(2) === 'LDhelloWOR');
+document.write(rotate(6) === 'oWORLDhell');
+
+rotate(10); // max value triggers rotation reversal
+
+document.write(rotate(1) === 'elloWORLDh');
+document.write(rotate(2) === 'lloWORLDhe');
+document.write(rotate(6) === 'ORLDhelloW');
+    </script>

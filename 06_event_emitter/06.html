@@ -1,0 +1,24 @@
+<script src='event_emitter.js'>
+</script>
+<script>
+    var greetingString,
+        byeString;
+    var eventEmitter = new MyEventEmitter();
+    eventEmitter.addListener('greet', function (name) {
+        greetingString = "Hello, " + name + "!";
+    });
+
+    eventEmitter.addListener('bye', function (name) {
+        byeString = "Bye, " + name + "!";
+    });
+
+    eventEmitter.emit('greet', 'Shanna');
+
+    document.write(greetingString === 'Hello, Shanna!');
+
+    document.write('<br>');
+
+    eventEmitter.emit('bye', 'Shanna');
+    document.write(byeString === "Bye, Shanna!");
+    document.write('<br>');
+</script>

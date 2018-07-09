@@ -1,0 +1,10 @@
+<script src='search.js'>
+</script>
+<script>
+    document.write(JSON.stringify(search(['a', ['b', ['c', ['d'], 'e'], 'f'], ['g'], 'h', [['i'], 'j']],
+    function (val) {
+			return val === 'd';
+        }
+    )));
+    document.write('<br>');
+</script>
